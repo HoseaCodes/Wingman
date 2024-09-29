@@ -5,16 +5,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { registerRootComponent } from 'expo';
 import * as SplashScreen from 'expo-splash-screen';
 import OnboardingScreen from './screens/OnboardingScreen';
+import HomeScreen from './screens/HomeScreen';
 
 SplashScreen.preventAutoHideAsync();
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
 
 const Stack = createNativeStackNavigator();
 
@@ -49,9 +42,10 @@ function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Onboarding">
+      {/* <Stack.Navigator initialRouteName="Onboarding"> */}
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Onboarding" options={{headerShown: false}} component={OnboardingScreen} />
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Home" options={{headerShown: false}} component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
