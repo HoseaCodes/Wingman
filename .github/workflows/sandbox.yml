@@ -1,0 +1,29 @@
+name: Sandbox Pipeline
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - master
+      - development
+      - staging
+  pull_request:
+    branches-ignore:
+      - main
+      - master
+      - development
+      - staging
+  
+  workflow_dispatch:   
+
+permissions:
+  pull-requests: write
+
+jobs:
+  generate-qr-code:
+    uses: HoseaCodes/AC-Templates/.github/workflows/actions/react-native/expo-sandbox/action.yml@main
+    with:
+      expo_username: 'hoseacodes'
+      expo_password: ${{ secrets.EXPO_PASSWORD }}
+      project_id: '27339099-a190-412f-b17c-40dfb90ea4c9'
+      expo_slug: 'exp'
