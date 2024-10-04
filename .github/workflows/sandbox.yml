@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   generate-qr-code:
-    uses: HoseaCodes/AC-Templates/.github/workflows/actions/react-native/expo-sandbox/action.yml@main  # Reference the reusable workflow here
+    uses: HoseaCodes/AC-Templates/.github/workflows/expo.yml@main
     with:
       expo_username: 'hoseacodes'
       expo_password: ${{ secrets.EXPO_PASSWORD }}
