@@ -20,15 +20,9 @@ permissions:
 
 jobs:
   generate-qr-code:
-    runs-on: ubuntu-latest 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2 
-      
-      - name: Generate QR Code
-        uses: HoseaCodes/AC-Templates/.github/workflows/actions/react-native/expo-sandbox/action.yml@main
-        with:
-          expo_username: 'hoseacodes'
-          expo_password: ${{ secrets.EXPO_PASSWORD }}
-          project_id: '27339099-a190-412f-b17c-40dfb90ea4c9'
-          expo_slug: 'exp'
+    uses: HoseaCodes/AC-Templates/.github/workflows/actions/react-native/expo-sandbox/action.yml@main  # Reference the reusable workflow here
+    with:
+      expo_username: 'hoseacodes'
+      expo_password: ${{ secrets.EXPO_PASSWORD }}
+      project_id: '27339099-a190-412f-b17c-40dfb90ea4c9'
+      expo_slug: 'exp'
