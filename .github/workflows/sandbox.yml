@@ -22,3 +22,4 @@ jobs:
     secrets:
       registry_username: ${{ secrets.REGISTRY_USERNAME }}  # Correct secrets reference
       registry_password: ${{ secrets.REGISTRY_PASSWORD }}  # Correct secrets reference
+
