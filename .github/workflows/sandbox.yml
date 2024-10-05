@@ -17,7 +17,7 @@ jobs:
     uses: HoseaCodes/AC-Templates/.github/workflows/example.yml@main
     with:
       image_name: my-awesome-app
-      tag: ${{ github.run_number }}  # Correct GitHub context reference for run number
+      tag: ${{ github.run_number }}  # Correct GitHub run number context reference
 
     secrets:
       registry_username: ${{ secrets.REGISTRY_USERNAME }}  # Correct secrets reference
