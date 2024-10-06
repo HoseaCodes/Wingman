@@ -3,6 +3,9 @@ name: Reusable Workflow user
 on:
   push:
 
+permissions:
+  pull-requests: write
+
 jobs:
   do-it:
     runs-on: ubuntu-latest
