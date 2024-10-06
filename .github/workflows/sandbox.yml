@@ -3,6 +3,9 @@ name: Reusable Workflow user
 on:
   push:
 
+permissions:
+  pull-requests: write
+
 jobs:
   do-it:
     runs-on: ubuntu-latest
@@ -15,12 +18,8 @@ jobs:
   generate-qr-code:
     uses: HoseaCodes/AC-Templates/.github/workflows/expo.yml@main
     with:
-      expo_username: my-awesome-app
-      expo_password: ${{ github.run_number }} 
-      project_id: 27339099-a190-412f-b17c-40dfb90ea4c9
+      project_id: 29e17e39-0355-454e-978f-d7ee1fd309e3
       expo_slug: exp
-
-    # secrets:
-    #   registry_username: ${{ secrets.REGISTRY_USERNAME }}  # Correct secrets reference
-    #   registry_password: ${{ secrets.REGISTRY_PASSWORD }}  # Correct secrets reference
-
+    secrets:
+      expo_username: ${{ secrets.EXPO_USERNAME }}
+      expo_password: ${{ secrets.EXPO_PASSWORD }}
