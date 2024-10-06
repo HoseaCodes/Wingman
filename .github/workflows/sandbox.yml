@@ -21,6 +21,7 @@ jobs:
       expo_username: ${{ secrets.EXPO_USERNAME }}
       expo_password: ${{ secrets.EXPO_PASSWORD }}
 
+
     # secrets:
     #   registry_username: ${{ secrets.REGISTRY_USERNAME }}  # Correct secrets reference
     #   registry_password: ${{ secrets.REGISTRY_PASSWORD }}  # Correct secrets reference
