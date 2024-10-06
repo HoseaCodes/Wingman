@@ -1,0 +1,38 @@
+{
+    "cli": {
+      "version": ">= 12.1.0",
+      "appVersionSource": "remote"
+    },
+    "build": {
+      "release": {
+        "ios": {
+          "distribution": "store"
+        },
+        "android": {
+          "distribution": "store"
+        }
+      },
+      "development": {
+        "ios": {
+          "developmentClient": true,
+          "distribution": "internal"
+        },
+        "android": {
+          "developmentClient": true,
+          "distribution": "internal"
+        }
+      },
+      "preview": {
+        "ios": {
+          "distribution": "internal"
+        },
+        "android": {
+          "distribution": "internal"
+        }
+      }
+    },
+    "submit": {
+      "production": {}
+    }
+  }
+  
