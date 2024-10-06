@@ -13,13 +13,15 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
-  docker:
-    uses: HoseaCodes/AC-Templates/.github/workflows/example.yml@main
+  generate-qr-code:
+    uses: HoseaCodes/AC-Templates/.github/workflows/expo.yml@main
     with:
-      image_name: my-awesome-app
-      tag: ${{ github.run_number }}  # Correct GitHub run number context reference
+      expo_username: my-awesome-app
+      expo_password: ${{ github.run_number }} 
+      project_id: 27339099-a190-412f-b17c-40dfb90ea4c9
+      expo_slug: exp
 
-    secrets:
-      registry_username: ${{ secrets.REGISTRY_USERNAME }}  # Correct secrets reference
-      registry_password: ${{ secrets.REGISTRY_PASSWORD }}  # Correct secrets reference
+    # secrets:
+    #   registry_username: ${{ secrets.REGISTRY_USERNAME }}  # Correct secrets reference
+    #   registry_password: ${{ secrets.REGISTRY_PASSWORD }}  # Correct secrets reference
 
