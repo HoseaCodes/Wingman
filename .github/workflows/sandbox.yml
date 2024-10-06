@@ -23,4 +23,3 @@ jobs:
     secrets:
       expo_username: ${{ secrets.EXPO_USERNAME }}
       expo_password: ${{ secrets.EXPO_PASSWORD }}
-
